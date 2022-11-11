@@ -9,13 +9,13 @@ namespace ClientLocalizationResx.Shared.Services
         {
             get
             {
-                return GetStringFromResource(name);
+                return GetStringFromResource(name) ?? string.Empty;
             }
         }
 
         public string GetStringFromResource(string key)
         {
-            return TelerikMessages.ResourceManager.GetString(key, TelerikMessages.Culture);
+            return TelerikMessages.ResourceManager.GetString(key, TelerikMessages.Culture) ?? string.Empty;
         }
     }
 }
